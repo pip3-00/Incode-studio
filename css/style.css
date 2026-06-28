@@ -1,0 +1,308 @@
+@import
+url('https://fonts.googleapis.com/css2?family=inter:wgh@300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --primary:#3b82f6;
+    --secondary:2563EB;
+    --dark:#07152f;
+    --text:#ffffff;
+    --text-ligth:#bfc8da;
+    --border:rgba(255,255,255,0.8);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"inter",sans-serif;
+    background-color:var(--dark);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.navbar{
+    padding:10px 0; /* navbar más delgadito */
+    transition:35s;
+    background: #07152f; /* quitar transparencia de la zona del navbar */
+}
+
+
+
+.navbar-brand img.navbar-logo{
+    height: 60px;
+    width: auto;
+}
+
+.navbar-brand{
+    align-items: center;
+}
+
+.navbar-brand-text{
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    color: var(--text);
+    white-space: nowrap;
+    margin-left: 0 !important;
+}
+
+.navbar-brand img.navbar-logo{
+    margin-right: 0 !important;
+}
+
+/* Mantener logo + texto pegados al lado izquierdo (sin margen por Bootstrap) */
+.navbar .container{
+    padding-left: 0 !important;
+    margin-left: -10px;
+}
+
+
+.navbar-brand{
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+
+
+.nav-link{
+    color:var(--text);
+    margin-left:20px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-link:hover{
+    color:var(--primary);
+}
+
+/* Asegura que el link activo tenga el mismo color base que los demás */
+.nav-link.active{
+    color:var(--text) !important;
+}
+
+
+
+.btn-primary{
+    background: linear-gradient(135deg,#3b82f6, #256);
+    border:none;
+    padding:12px 18px;
+    border-radius:10px;
+    font-weight:500;
+    box-shadow:0 10px 30px rgba(59,130,246,0.35);
+
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+
+.hero{
+    position:relative;
+    overflow:hidden;
+    padding:130px 0;
+    padding-bottom: 100px;
+
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    background:#2563EB;
+    border-radius:50%;
+    filter:blur(350px);
+    opacity:15px;
+    right:250px;
+    top:-150px;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    background:#1d4ed8;
+    border-radius:50%;
+    filter:blur(290px);
+    opacity:12px;
+    left:250px;
+    bottom:-150px;
+}
+
+.hero-container{
+    position:relative;
+    z-index:5;
+
+}
+
+.hero-tag{
+    display:inline-block;
+    color:#60a5fa;
+    font-weight:700;
+    letter-spacing:1.5px;
+    margin-bottom:18px;
+    font-size:1.25rem;
+}
+
+.hero h1{
+    font-size:clamp(2.4rem,5vw,4.5rem);
+    font-weight:600;
+    line-height:1.15;
+}
+
+.hero h1 span{
+    color:#60a5fa;
+}
+
+.hero p{
+    margin-top:25px;
+    color:var(--text-ligth);
+    font-size:1.1125rem;
+    line-height:1.6;
+    max-width:600px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap: 19px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.btn-outline-light{
+    border-radius:10px;
+    padding:10px 18px;
+}
+
+
+.hero-image{
+    position:relative;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image::before{
+    content:"";
+    position:absolute;
+    width:400px;    
+    height:400px;
+    background:#3b82f6;
+    border-radius:50%;
+    filter:blur(290px);
+    opacity:25px;
+}
+
+
+.hero-image img{
+    width:120%;
+    max-width:700px;
+    position:relative;
+    z-index:2;
+    animation:float 6s ease-in-out infinite;
+    filter:drop-shadow(0 40px 40px rgba(0,0,0,0.45));
+}
+
+@keyframes Float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-18px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* --- Fix de contraste para el texto en “Sobre Nosotros” --- */
+.nosotros-text,
+.desarrollo-nosotros-text{
+    color:#e5e7eb !important;
+    opacity:1;
+}
+
+.servicio-emoticono{
+    font-size: 2.25rem;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.card .card-body{
+    min-height: 210px;
+}
+
+/* Mejora contraste para el texto de la sección de servicios */
+#servicios .card-title{
+    color: var(--text) !important;
+}
+
+#servicios .card-text{
+    color: #dbeafe !important; /* azul claro legible sobre fondo oscuro */
+    opacity: 1 !important;
+}
+
+
+/* ===================== FOOTER ===================== */
+#footer{
+    background: linear-gradient(135deg, rgba(59,130,246,0.30) 0%, rgba(29,78,216,0.55) 35%, rgba(7,21,47,0.98) 100%);
+    border-top: 1px solid rgba(59,130,246,0.35);
+}
+
+
+
+.footer-subtitle{
+    color: var(--text);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.footer-text{
+    color: #dbeafe;
+    opacity: 0.95;
+}
+
+.footer-info{
+    color: #e5e7eb;
+}
+
+.footer-info span{
+    color: #e5e7eb;
+}
+
+.footer-brand{
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.footer-copy{
+    color: rgba(229,231,235,0.8);
+}
+
+
+
+
+
+
+
