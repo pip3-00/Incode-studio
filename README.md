@@ -1,4 +1,4 @@
-# Vertex Code (Sitio Web)
+# Incode Studio (Sitio Web)
 
 Proyecto web **estático** para la marca **Vertex Code | Desarrollo de Software e IA**.
 
